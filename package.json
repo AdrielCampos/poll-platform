@@ -1,0 +1,23 @@
+{
+  "name": "poll-platform",
+  "scripts": {
+    "build": "lerna run build",
+    "start": "lerna run start",
+    "test": "lerna run test",
+    "test:api": "yarn workspace @poll-platform/api test",
+    "test:api:watch": "yarn workspace @poll-platform/api test:watch",
+    "dev": "lerna run dev",
+    "dev:web": "yarn workspace @poll-platform/web dev",
+    "dev:api": "yarn workspace @poll-platform/api dev",
+    "clean": "yarn dlx rimraf node_modules */**/node_modules",
+    "reset": "yarn clean && yarn"
+  },
+  "packageManager": "yarn@4.3.1",
+  "workspaces": [
+    "apps/*"
+  ],
+  "dependencies": {
+    "lerna": "^8.1.9",
+    "prettier": "^3.4.2"
+  }
+}
